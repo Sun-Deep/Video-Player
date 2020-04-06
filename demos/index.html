@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../thirdparty/js.cookie.js"></script>
+
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="../build/ableplayer.min.css" type="text/css"/>
+
+    <!-- Able Player JavaScript -->
+    <script src="../build/ableplayer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+
+    <style>
+        body{
+          height: 100%;
+          width: 100%;
+        }
+        .video-player{
+          width: 100%;
+          max-height: 600px;
+          height: auto;
+        }
+    </style>
+  </head>
+  <body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="video-player">
+                <video id="video1" preload="auto" data-able-player data-skin="2020" data-meta-type="selector" playsinline>
+                  <source type="video/mp4" src="../embed/video.mp4" data-desc-src="../media/wwa_described.mp4"/>
+                </video>
+        </div>
+    </div>
+</div>
+
+<button style="background-color: blue; color: white;" onclick="embed()">Share</button>
+    
+
+<script>
+  function embed(){
+    let video = document.getElementById("video1").childNodes[1]
+    // let child = video.childNodes()
+
+    let src = Object.prototype.toLocaleString(video)
+    console.log(src)
+  }
+</script>
+  </body>
+</html>
